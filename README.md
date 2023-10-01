@@ -22,7 +22,7 @@ This Python script provides a convenient way to automate the process of verifyin
    ```python
     imap_server = 'outlook.office365.com' #example email 
     port = 993 #example port
-```
+    ```
 
 5. If you're only working with one email account, you can specify the line number in the text file that corresponds to your account. You can do this by calling the function as follows: `email_verify(line_number=1)`.
 
