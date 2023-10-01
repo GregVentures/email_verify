@@ -18,7 +18,13 @@ This Python script provides a convenient way to automate the process of verifyin
 
 2. Add your email address and password with the following format in `credentials.txt`: `email_address,password`.
 
-3. If you're only working with one email account, you can specify the line number in the text file that corresponds to your account. You can do this by calling the function as follows: `email_verify(line_number=1)`.
+3. Remember to change the port and the email server within `email_verification.py` at line 8 and 9
+   ```python
+    imap_server = 'outlook.office365.com' #example email 
+    port = 993 #example port
+```
+
+5. If you're only working with one email account, you can specify the line number in the text file that corresponds to your account. You can do this by calling the function as follows: `email_verify(line_number=1)`.
 
 ### Using Line Numbers for Multiple Accounts
 
