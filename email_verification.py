@@ -5,12 +5,12 @@ import re
 
 
 def email_verify(line_number):
-    imap_server = 'outlook.office365.com'
-    port = 993
+    imap_server = 'outlook.office365.com' # change this
+    port = 993 # change this
     with open('credentials.txt', 'r') as file:
         lines = file.read().splitlines()
     if 0 <= line_number < len(lines):
-        phone_number, email_address, password, credit_card, date, cvc, post, proxy = lines[line_number].split(',')
+        email_address, password = lines[line_number].split(',')
         print(f"Verifying email address: {email_address}")
 
         imap = imaplib.IMAP4_SSL(imap_server, port)
@@ -38,8 +38,6 @@ def email_verify(line_number):
             subject = subject.decode('utf-8')
             code = re.sub("[^0-9]", "", subject)
             print(f"Verification code: {code} for email address: {email_address}")
-
-            # print(f"No verification email found for email address: {email_address}")
         return code
     else:
         print("Invalid line number provided.")
