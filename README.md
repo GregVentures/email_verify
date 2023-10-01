@@ -1,5 +1,3 @@
-Sure, I've formatted your text to make it look cooler and more organized:
-
 # Email Verification Script
 
 This Python script provides a convenient way to automate the process of verifying accounts with email and extracting verification codes from emails sent by a specific source. It is designed to work with email accounts that are compatible with the `imaplib` library.
